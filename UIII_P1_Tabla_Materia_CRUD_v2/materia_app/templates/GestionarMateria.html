@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+n
+{% block cuerpo %}
+
+<div class="row"> <!-- la fila -->
+<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"> <!-- Columna izquierda -->
+    <h1>Mamá</h1>
+</div> <!-- Columna izquierda -->
+<div class="col-sm-12 col-md-8 col-lg-8 col-xl-4">  <!-- Columna Derecha -->
+    <h1>Papá</h1>
+    <div class="table-responsive"> <!-- Tabla responsiva -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Creditos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for m in MisMaterias %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{m.Codigo}}</td>
+                    <td>{{m.Nombre}}</td>
+                    <td>{{m.Creditos}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div><!-- Tabla responsiva -->
+
+</div> <!-- Columna Derecha -->
+
+</div> <!-- la fila -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
